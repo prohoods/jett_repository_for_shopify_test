@@ -12,6 +12,7 @@
     "colors": "Colors",
     "column": "Column",
     "content": "Content",
+    "custom_404": "Custom 404",
     "custom_section": "Custom section",
     "fonts": "Fonts",
     "footer": "Footer",
@@ -36,7 +37,12 @@
   "labels": {
     "alignment": "Alignment",
     "background": "Background",
+    "button_label": "Button label",
+    "button_link": "Button link",
     "foreground": "Foreground",
+    "heading": "Heading",
+    "image": "Image",
+    "message": "Message",
     "grid_gap": "Grid spacing",
     "grid_item_width": "Grid item width",
     "input_corner_radius": "Input corner radius",
@@ -72,6 +78,6 @@
       "title": "Title",
       "subtitle": "Subtitle",
       "normal": "Normal text"
-    },
+    }
   }
 }
