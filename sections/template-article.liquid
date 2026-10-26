@@ -1,0 +1,20 @@
+<h1>{{ article.title }}</h1>
+
+<small>{{ article.author }}</small>
+
+<time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: "%B %d, %Y" }}</time>
+
+{% if article.image %}
+  {{ article.image | image_url: width: 1200 | image_tag: alt: article.image.alt }}
+{% endif %}
+
+<div class="article-content">
+  {{ article.content }}
+</div>
+
+{% schema %}
+{
+  "name": "t:general.article",
+  "settings": []
+}
+{% endschema %}
