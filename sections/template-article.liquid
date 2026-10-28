@@ -1,8 +1,12 @@
 <h1>{{ article.title }}</h1>
 
+{% if section.settings.enable_author %}
 <small>{{ article.author }}</small>
+{% endif %}
 
+{% if section.settings.enable_published_date %}
 <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: "%B %d, %Y" }}</time>
+{% endif %}
 
 {% if article.image %}
   {{ article.image | image_url: width: 1200 | image_tag: alt: article.image.alt }}
@@ -15,6 +19,19 @@
 {% schema %}
 {
   "name": "t:general.article",
-  "settings": []
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_author",
+      "default": true,
+      "label": "Enable author"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_published_date",
+      "default": true,
+      "label": "Enable published date"
+    }
+  ]
 }
 {% endschema %}
